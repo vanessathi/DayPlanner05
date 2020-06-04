@@ -18,7 +18,7 @@ $(document).ready(function() {
     //  for (var i = 9; i<18; i++) ?? 
 
      $(".timeBlock").each(function() {
-         var hourBlock = parseInt($(this).attr("id"));
+         var hourBlock = parseInt($(this).attr("id").split("-")[1]);
 
          if (hourBlock < currentTime){
              $(this).addClass("past");
@@ -38,17 +38,18 @@ getHour();
 
 var interval = setInterval(getHour, 15000);
 
-$("#9 .textInput").val(localStorage.getItem("9"));
-$("#10 .textInput").val(localStorage.getItem("10"));
-$("#11 .textInput").val(localStorage.getItem("11"));
-$("#12 .textInput").val(localStorage.getItem("12"));
-$("#13 .textInput").val(localStorage.getItem("1"));
-$("#14 .textInput").val(localStorage.getItem("2"));
-$("#15 .textInput").val(localStorage.getItem("3"));
-$("#16 .textInput").val(localStorage.getItem("4"));
-$("#17 .textInput").val(localStorage.getItem("5"));
+$("#hour-9 .textInput").val(localStorage.getItem("hour-9"));
+$("#hour-10 .textInput").val(localStorage.getItem("hour-10"));
+$("#hour-11 .textInput").val(localStorage.getItem("hour-11"));
+$("#hour-12 .textInput").val(localStorage.getItem("hour-12"));
+$("#hour-13 .textInput").val(localStorage.getItem("hour-13"));
+$("#hour-14 .textInput").val(localStorage.getItem("hour-14"));
+$("#hour-15 .textInput").val(localStorage.getItem("hour-15"));
+$("#hour-16 .textInput").val(localStorage.getItem("hour-16"));
+$("#hour-17 .textInput").val(localStorage.getItem("hour-17"));
 
 $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
+
 });
 
 
