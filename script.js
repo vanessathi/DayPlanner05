@@ -18,10 +18,15 @@ $(document).ready(function() {
     //  for (var i = 9; i<18; i++) ?? 
 
      $(".timeBlock").each(function() {
-         var hourBlock = parseInt($(this).attr("id").split("-")[1]);
+         var hourBlock = parseInt(
+             $(this)
+                .attr("id")
+                .split("-")[1]
+             );
 
          if (hourBlock < currentTime){
              $(this).addClass("past");
+
          } else if (hourBlock === currentTime){
             //  $(this).removeClass('past').addClass('present'); 
             $(this).removeClass("past");
