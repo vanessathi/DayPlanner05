@@ -31,22 +31,22 @@ $(document).ready(function() {
              $(this).removeClass("present");
              $(this).addClass("future");
          }
-     })
+     });
  }
 
 getHour();
 
 var interval = setInterval(getHour, 15000);
 
-$("#9 .description").val(localStorage.getItem("9"));
-$("#10 .description").val(localStorage.getItem("10"));
-$("#11 .description").val(localStorage.getItem("11"));
-$("#12 .description").val(localStorage.getItem("12"));
-$("#13 .description").val(localStorage.getItem("1"));
-$("#14 .description").val(localStorage.getItem("2"));
-$("#15 .description").val(localStorage.getItem("3"));
-$("#16 .description").val(localStorage.getItem("4"));
-$("#17 .description").val(localStorage.getItem("5"));
+$("#9 .textInput").val(localStorage.getItem("9"));
+$("#10 .textInput").val(localStorage.getItem("10"));
+$("#11 .textInput").val(localStorage.getItem("11"));
+$("#12 .textInput").val(localStorage.getItem("12"));
+$("#13 .textInput").val(localStorage.getItem("1"));
+$("#14 .textInput").val(localStorage.getItem("2"));
+$("#15 .textInput").val(localStorage.getItem("3"));
+$("#16 .textInput").val(localStorage.getItem("4"));
+$("#17 .textInput").val(localStorage.getItem("5"));
 
 $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
 });
