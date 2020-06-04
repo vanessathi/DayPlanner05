@@ -26,7 +26,6 @@ $(document).ready(function() {
 
          if (hourBlock < currentTime){
              $(this).addClass("past");
-
          } else if (hourBlock === currentTime){
             //  $(this).removeClass('past').addClass('present'); 
             $(this).removeClass("past");
@@ -41,7 +40,7 @@ $(document).ready(function() {
 
 getHour();
 
-var interval = setInterval(getHour, 15000);
+var interval = setInterval(getHour, 10000);
 
 $("#hour-9 .description").val(localStorage.getItem("hour-9"));
 $("#hour-10 .description").val(localStorage.getItem("hour-10"));
